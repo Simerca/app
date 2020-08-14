@@ -1,24 +1,33 @@
 <template>
-  <div class="col-12">
+<div class="col-12">
     <div class="row">
-        <div class="col-3">
-            <ul class="nav">
-                <router-link to="/videos/search/node"><li class="nav-item">Node JS</li></router-link>
-            </ul>
-        </div>    
-        <div class="col-9">
+        <div class="col-12">
+            <CategoriesHeadView />
+        </div>
+        <div class="col-12">
             <router-view></router-view>
-        </div>    
-    </div> 
-  </div>
+        </div>
+    </div>
+</div>
 </template>
 
 <script>
+import CategoriesHeadView from '@/components/Menu/CategoriesHeadView.vue';
 export default {
-
+  components:{
+    CategoriesHeadView
+  }
 }
 </script>
 
 <style>
-
+.fast-link .nav-item {
+    list-style: none;
+    text-decoration: none;
+    border-radius: 3px;
+    width: auto;
+    cursor:pointer;
+    display: inline-block;
+    padding: 3px 5px 3px 5px;
+}
 </style>

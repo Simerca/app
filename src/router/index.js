@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
 import Videos from '../views/Videos.vue'
 
 import VideoView from '@/components/Videos/VideoView'
+import VideoSearch from '@/components/Videos/VideoSearch'
 import VideoList from '@/components/Videos/VideoList'
 
 Vue.use(VueRouter)
@@ -13,7 +13,7 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: VideoList
   },
   {
     path: '/videos',
@@ -21,7 +21,8 @@ Vue.use(VueRouter)
     component: Videos,
     children:[
       { path:'view/:id', component: VideoView },
-      { path:'search/:name', component: VideoList },
+      { path:'search/:key', component: VideoSearch },
+      { path:'trend', component: VideoList },
     ]
   },
   {

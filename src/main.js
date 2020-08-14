@@ -6,6 +6,8 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+Vue.prototype.$imgUrl = 'http://localhost:1337'
+
 new Vue({
   router,
   store,

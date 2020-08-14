@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Devtube</string>
+    <string name="title_activity_main">Devtube</string>
+    <string name="package_name">devtub.ayrton.com</string>
+    <string name="custom_url_scheme">devtub.ayrton.com</string>
+</resources>

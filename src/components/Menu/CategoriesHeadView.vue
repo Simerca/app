@@ -25,6 +25,8 @@ export default {
 .icon {
     width:20px;
     height:20px;
+    object-fit: cover;
+    position:center;
 }
 
 .fast-link{

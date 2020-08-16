@@ -3,9 +3,18 @@ import VueRouter from 'vue-router'
 
 import Videos from '../views/Videos.vue'
 
+import Login from '../views/Login.vue'
+import Account from '../views/Account.vue'
+import Register from '@/components/Account/Register'
+import Report from '@/components/Report'
+
 import VideoView from '@/components/Videos/VideoView'
-import VideoSearch from '@/components/Videos/VideoSearch'
 import VideoList from '@/components/Videos/VideoList'
+import VideosFav from '@/components/Videos/VideosFav'
+
+import CGV from '@/views/CGV';
+
+import VideoProposal from '@/components/Account/VideoProposal'
 
 Vue.use(VueRouter)
 
@@ -16,13 +25,42 @@ Vue.use(VueRouter)
     component: VideoList
   },
   {
+    path: '/login',
+    name: 'login',
+    component: Login
+  },
+  {
+    path: '/cgv',
+    name: 'cgv',
+    component: CGV
+  },
+  {
+    path: '/signin',
+    name: 'signin',
+    component: Register
+  },
+  {
+    path: '/report/:id',
+    name: 'report',
+    component: Report
+  },
+  {
+    path: '/account',
+    name: 'account',
+    component: Account,
+    children:[
+      {path:'proposal', component: VideoProposal},
+    ]
+  },
+  {
     path: '/videos',
     name: 'Video',
     component: Videos,
     children:[
       { path:'view/:id', component: VideoView },
-      { path:'search/:key', component: VideoSearch },
+      { path:'search/:key', component: VideoList },
       { path:'trend', component: VideoList },
+      { path:'favorites', component: VideosFav },
     ]
   },
   {

@@ -1,9 +1,8 @@
 <template>
-  <div class="container">
       <div class="row">
           <!-- Video List -->
-          <div class="col-12" v-for="(video,i) in videos" :key="i">
-              <router-link to="/videos/view/1" tag="div" class="card shadow">
+          <div class="col-12 m-0 p-0" v-for="(video,i) in videos" :key="i">
+              <router-link to="/videos/view/1" tag="div" class="card shadow-sm">
                 <img class="card-img-top" :src="$imgUrl+video.miniature.url" />
                   <div class="card-header">
                   </div>
@@ -24,7 +23,6 @@
           </div>
           <!-- Video List -->
       </div>
-    </div>
 </template>
 
 <script>
@@ -42,7 +40,9 @@ export default {
     },
     mounted(){
         console.log(this.$route);
-        
+        this.$store.dispatch('searchVideosByCatKey',{
+                key:this.$route.params.key
+            });
     },
     watch:{
         searchKey:function(newVal){

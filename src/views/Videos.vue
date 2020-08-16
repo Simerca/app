@@ -1,22 +1,18 @@
 <template>
-<div class="col-12">
-    <div class="row">
-        <div class="col-12">
-            <CategoriesHeadView />
+<div>
+        <div class="col-12 m-0 p-0">
+            
         </div>
-        <div class="col-12">
-            <router-view></router-view>
+        <div class="col-12 m-0 p-0">
+            <transition name="fade">
+              <router-view></router-view>
+            </transition>
         </div>
-    </div>
 </div>
 </template>
 
 <script>
-import CategoriesHeadView from '@/components/Menu/CategoriesHeadView.vue';
 export default {
-  components:{
-    CategoriesHeadView
-  }
 }
 </script>
 

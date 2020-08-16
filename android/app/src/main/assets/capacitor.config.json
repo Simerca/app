@@ -1,6 +1,6 @@
 {
-  "appId": "devtub.ayrton.com",
-  "appName": "Devtube",
+  "appId": "devidz.ayrton.com",
+  "appName": "Devidz",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "dist",
